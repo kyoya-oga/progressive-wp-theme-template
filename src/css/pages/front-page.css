@@ -1,0 +1,3 @@
+.frontHeading {
+  @apply text-4xl text-blue font-bold;
+}

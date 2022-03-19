@@ -1,0 +1,75 @@
+/* WordPressネイティブCSSの復元 */
+.wysiwyg-style {
+  .aligncenter {
+    display: block;
+    margin: 0 auto;
+  }
+  .alignright {
+    float: right;
+    margin: 0 0 10px 20px;
+  }
+  .alignleft {
+    float: left;
+    margin: 0 20px 10px 0;
+  }
+  .wp-caption {
+    border: 1px solid #ddd;
+    text-align: left;
+    background-color: #f3f3f3;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  .wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+  }
+  .wp-caption p.wp-caption-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    margin: 15px 0;
+  }
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.25em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  h5 {
+    font-size: 0.8em;
+  }
+  h6 {
+    font-size: 0.6em;
+  }
+  ul,
+  ol {
+    padding-left: 30px;
+  }
+  blockquote {
+    display: block;
+  }
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  div {
+    max-width: 100%;
+    height: auto;
+  }
+}

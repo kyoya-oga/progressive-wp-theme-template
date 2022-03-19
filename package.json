@@ -1,0 +1,38 @@
+{
+  "name": "wp-template-with-tailwind-alpine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/css/style.css -o ./dist/css/style.css --postcss --minify",
+    "build:css-editor": "tailwind -i ./src/css/editor-style.css -o ./dist/css/editor-style.css --postcss --minify",
+    "dev:css": "tailwindcss -i ./src/css/style.css -o ./dist/css/style.css --postcss --watch",
+    "dev:css-editor": "tailwindcss -i ./src/css/editor-style.css -o ./dist/css/editor-style.css --postcss --watch",
+    "build:js": "./node_modules/.bin/esbuild ./src/js/main.js --bundle --outfile=./dist/js/main.js --minify",
+    "dev:js": "./node_modules/.bin/esbuild ./src/js/main.js --bundle --outfile=./dist/js/main.js --watch",
+    "build": "cross-env NODE_ENV=production concurrently \"npm run build:css\" \"npm run build:css-editor\" \"npm run build:js\"",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run dev:css\" \"npm run dev:js\" \"npm run browser-sync\"",
+    "browser-sync": "cross-env NODE_ENV=development browser-sync start --proxy \"wptest.local\" --files=\"./\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "browser-sync": "^2.27.9",
+    "concurrently": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.14.27",
+    "postcss": "^8.4.12",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
+    "resolve-url-loader": "^5.0.0",
+    "tailwindcss": "^3.0.23"
+  },
+  "browserslist": [
+    "last 2 version"
+  ],
+  "dependencies": {
+    "alpinejs": "^3.9.1"
+  }
+}

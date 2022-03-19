@@ -1,0 +1,3 @@
+.btn {
+  @apply bg-pink text-white p-3;
+}
